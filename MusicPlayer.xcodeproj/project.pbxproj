@@ -8,20 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		91359A1A210089C000DBB5BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91359A19210089C000DBB5BF /* AppDelegate.swift */; };
-		91359A1C210089C000DBB5BF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91359A1B210089C000DBB5BF /* ViewController.swift */; };
+		91359A1C210089C000DBB5BF /* MusicPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91359A1B210089C000DBB5BF /* MusicPlayerViewController.swift */; };
 		91359A1F210089C000DBB5BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91359A1D210089C000DBB5BF /* Main.storyboard */; };
 		91359A21210089C700DBB5BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91359A20210089C700DBB5BF /* Assets.xcassets */; };
 		91359A24210089C700DBB5BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91359A22210089C700DBB5BF /* LaunchScreen.storyboard */; };
+		91359A2C21008E6300DBB5BF /* UIButton+Designable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91359A2B21008E6300DBB5BF /* UIButton+Designable.swift */; };
+		91359A2F2100927300DBB5BF /* PaperThin.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 91359A2E2100927300DBB5BF /* PaperThin.mp3 */; };
+		91359A312100927E00DBB5BF /* Shine.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 91359A302100927E00DBB5BF /* Shine.mp3 */; };
+		91359A332100929100DBB5BF /* LetItIn.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 91359A322100929100DBB5BF /* LetItIn.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		91359A16210089C000DBB5BF /* MusicPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91359A19210089C000DBB5BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		91359A1B210089C000DBB5BF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		91359A1B210089C000DBB5BF /* MusicPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerViewController.swift; sourceTree = "<group>"; };
 		91359A1E210089C000DBB5BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		91359A20210089C700DBB5BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		91359A23210089C700DBB5BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		91359A25210089C700DBB5BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		91359A2B21008E6300DBB5BF /* UIButton+Designable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Designable.swift"; sourceTree = "<group>"; };
+		91359A2E2100927300DBB5BF /* PaperThin.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = PaperThin.mp3; sourceTree = "<group>"; };
+		91359A302100927E00DBB5BF /* Shine.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Shine.mp3; sourceTree = "<group>"; };
+		91359A322100929100DBB5BF /* LetItIn.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = LetItIn.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,13 +63,33 @@
 			isa = PBXGroup;
 			children = (
 				91359A19210089C000DBB5BF /* AppDelegate.swift */,
-				91359A1B210089C000DBB5BF /* ViewController.swift */,
+				91359A1B210089C000DBB5BF /* MusicPlayerViewController.swift */,
+				91359A2D2100907F00DBB5BF /* Extensions */,
 				91359A1D210089C000DBB5BF /* Main.storyboard */,
+				91359A34210092CE00DBB5BF /* Music */,
 				91359A20210089C700DBB5BF /* Assets.xcassets */,
 				91359A22210089C700DBB5BF /* LaunchScreen.storyboard */,
 				91359A25210089C700DBB5BF /* Info.plist */,
 			);
 			path = MusicPlayer;
+			sourceTree = "<group>";
+		};
+		91359A2D2100907F00DBB5BF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				91359A2B21008E6300DBB5BF /* UIButton+Designable.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		91359A34210092CE00DBB5BF /* Music */ = {
+			isa = PBXGroup;
+			children = (
+				91359A2E2100927300DBB5BF /* PaperThin.mp3 */,
+				91359A302100927E00DBB5BF /* Shine.mp3 */,
+				91359A322100929100DBB5BF /* LetItIn.mp3 */,
+			);
+			path = Music;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,7 +151,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				91359A24210089C700DBB5BF /* LaunchScreen.storyboard in Resources */,
+				91359A332100929100DBB5BF /* LetItIn.mp3 in Resources */,
 				91359A21210089C700DBB5BF /* Assets.xcassets in Resources */,
+				91359A312100927E00DBB5BF /* Shine.mp3 in Resources */,
+				91359A2F2100927300DBB5BF /* PaperThin.mp3 in Resources */,
 				91359A1F210089C000DBB5BF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -135,8 +166,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				91359A1C210089C000DBB5BF /* ViewController.swift in Sources */,
+				91359A1C210089C000DBB5BF /* MusicPlayerViewController.swift in Sources */,
 				91359A1A210089C000DBB5BF /* AppDelegate.swift in Sources */,
+				91359A2C21008E6300DBB5BF /* UIButton+Designable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
