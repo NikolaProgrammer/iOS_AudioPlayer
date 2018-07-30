@@ -15,7 +15,7 @@ class MusicPlayerViewController: UIViewController {
     private var player: AVAudioPlayer!
     private var timer: Timer!
     
-    private let songs = ["Paper Thin.mp3", "Shine.mp3", "Let It In.mp3"]
+    private let songs = [(name: "Paper Thin", type: "mp3"), (name: "Shine", type: "mp3"), (name: "Let It In", type: "mp3")]
     private var currentSongIndex = 1
 
     @IBOutlet weak var songNameLabel: UILabel!
@@ -84,19 +84,17 @@ class MusicPlayerViewController: UIViewController {
     }
     
     private func takeSongByURL(atPosition position: Int) {
-        var song = songs[position].split(separator: ".")
-        let songType = String(song.removeLast())
-        let songName = song.joined(separator: ".")
+        let song = songs[position]
    
-        songNameLabel.text = songName
+        songNameLabel.text = song.name
  
-        let audioPath = Bundle.main.path(forResource: songName.replacingOccurrences(of: " ", with: ""), ofType: songType)
+        let audioPath = Bundle.main.path(forResource: song.name.replacingOccurrences(of: " ", with: ""), ofType: song.type)
         
         do {
             try player = AVAudioPlayer(contentsOf: URL(string: audioPath!)!)
             player.delegate = self
             
-            if songType == "mp3" {
+            if song.type == "mp3" {
                 obtainMp3Metadata(withURL: audioPath!)
             }
    
