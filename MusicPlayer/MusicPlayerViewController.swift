@@ -15,10 +15,10 @@ class MusicPlayerViewController: UIViewController {
     private var player: AVAudioPlayer!
     private var timer: Timer!
     
-    private let songs = ["Paper Thin", "Shine", "Let It In"]
+    private let songs = ["Paper Thin.mp3", "Shine.mp3", "Let It In.mp3"]
     private var currentSongIndex = 1
 
-    @IBOutlet weak var songName: UILabel!
+    @IBOutlet weak var songNameLabel: UILabel!
     @IBOutlet weak var songImage: UIImageView!
     @IBOutlet weak var durationSlider: UISlider!
     @IBOutlet weak var durationLabel: UILabel!
@@ -84,16 +84,22 @@ class MusicPlayerViewController: UIViewController {
     }
     
     private func takeSongByURL(atPosition position: Int) {
-        songName.text = songs[position]
-        
-        let audioPath = Bundle.main.path(forResource: songs[position].replacingOccurrences(of: " ", with: ""), ofType: "mp3")
+        var song = songs[position].split(separator: ".")
+        let songType = String(song.removeLast())
+        let songName = song.joined(separator: ".")
+   
+        songNameLabel.text = songName
+ 
+        let audioPath = Bundle.main.path(forResource: songName.replacingOccurrences(of: " ", with: ""), ofType: songType)
         
         do {
             try player = AVAudioPlayer(contentsOf: URL(string: audioPath!)!)
             player.delegate = self
             
-            obtainMp3Metadata(withURL: audioPath!)
-            
+            if songType == "mp3" {
+                obtainMp3Metadata(withURL: audioPath!)
+            }
+   
             durationSlider.minimumValue = 0
             durationSlider.maximumValue = Float(player.duration)
             
